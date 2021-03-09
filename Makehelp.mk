@@ -3,12 +3,12 @@
 .DEFAULT_GOAL := help
 
 # COLORS
-GREEN  := $(shell tput -Tvt100 setaf 2)
-YELLOW := $(shell tput -Tvt100 setaf 3)
-WHITE  := $(shell tput -Tvt100 setaf 7)
-RED    := $(shell tput -Tvt100 setaf 1)
-CYAN   := $(shell tput -Tvt100 setaf 6)
-RESET  := $(shell tput -Tvt100 sgr0)
+GREEN  := $(shell tput setaf 2)
+YELLOW := $(shell tput setaf 3)
+WHITE  := $(shell tput setaf 7)
+RED    := $(shell tput setaf 1)
+CYAN   := $(shell tput setaf 6)
+RESET  := $(shell tput sgr0)
 
 TARGET_MAX_CHAR_NUM := 20
 
