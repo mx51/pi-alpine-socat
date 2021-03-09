@@ -2,6 +2,10 @@
 
 set -e
 
+# Fix for: "tput: terminal attributes: No such device or address" in azure
+# Via: https://github.com/edeliver/edeliver/issues/188
+[[ -t 0 ]] && tput setaf 1 || true
+
 ###
 # GLOBALS
 ###
