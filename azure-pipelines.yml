@@ -22,6 +22,32 @@ stages:
 
     steps:
 
+    - script: toe -a
+      displayName: "toe -a"
+
+    - script: |
+        echo
+        echo "Before '/usr/bin/tput -T xterm-256color setaf 9' ..."
+        /usr/bin/tput -T xterm-256color setaf 9
+        echo "After '/usr/bin/tput -T xterm-256color setaf 9'"
+        echo
+      displayName: "tput with xterm-256color"
+
+    - script: |
+        echo
+        echo "Before '/usr/bin/tput -Txterm setaf 2' ..."
+        /usr/bin/tput -Txterm setaf 2
+        echo "After '/usr/bin/tput -Txterm setaf 2'"
+        echo
+      displayName: "tput with xterm"
+
+    - script: |
+        echo
+        echo "Sleeping for 600 seconds ..."
+        sleep 600
+        echo
+      displayName: "sleep 600"
+
     - script: make build
       displayName: "Build image"
 
