@@ -3,12 +3,13 @@
 .DEFAULT_GOAL := help
 
 # COLORS
-GREEN  := $(shell tput setaf 2)
-YELLOW := $(shell tput setaf 3)
-WHITE  := $(shell tput setaf 7)
-RED    := $(shell tput setaf 1)
-CYAN   := $(shell tput setaf 6)
-RESET  := $(shell tput sgr0)
+export TERM ?= xterm
+GREEN  := $(shell tput -Txterm setaf 2)
+YELLOW := $(shell tput -Txterm setaf 3)
+WHITE  := $(shell tput -Txterm setaf 7)
+RED    := $(shell tput -Txterm setaf 1)
+CYAN   := $(shell tput -Txterm setaf 6)
+RESET  := $(shell tput -Txterm sgr0)
 
 TARGET_MAX_CHAR_NUM := 20
 
