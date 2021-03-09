@@ -4,12 +4,13 @@
 
 # COLORS
 export TERM ?= xterm
-GREEN  := $(shell tput -T xterm setaf 2)
-YELLOW := $(shell tput -T xterm setaf 3)
-WHITE  := $(shell tput -T xterm setaf 7)
-RED    := $(shell tput -T xterm setaf 1)
-CYAN   := $(shell tput -T xterm setaf 6)
-RESET  := $(shell tput -T xterm sgr0)
+TPUT_INIT := $(shell tput init)
+GREEN     := $(shell tput -Txterm setaf 2)
+YELLOW    := $(shell tput -Txterm setaf 3)
+WHITE     := $(shell tput -Txterm setaf 7)
+RED       := $(shell tput -Txterm setaf 1)
+CYAN      := $(shell tput -Txterm setaf 6)
+RESET     := $(shell tput -Txterm sgr0)
 
 TARGET_MAX_CHAR_NUM := 20
 
