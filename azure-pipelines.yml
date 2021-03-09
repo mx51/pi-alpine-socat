@@ -25,6 +25,9 @@ stages:
     - script: toe -a
       displayName: "toe -a"
 
+    - script: tty
+      displayName: "tty"
+
     - script: |
         echo
         echo "Executing tput init ..."
