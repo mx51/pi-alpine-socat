@@ -30,12 +30,14 @@ stages:
         echo "Executing tput init ..."
         /usr/bin/tput init
       displayName: "tput init 1"
+      condition: always()
 
     - script: |
         echo
         echo "Executing TERM=vt100 tput init ..."
         TERM=vt100 /usr/bin/tput init
       displayName: "tput init 2"
+      condition: always()
 
     - script: |
         echo
@@ -45,6 +47,7 @@ stages:
         /usr/bin/tput -T xterm-256color setaf 9
         echo "After '/usr/bin/tput -T xterm-256color setaf 9'"
       displayName: "tput init 3"
+      condition: always()
 
     - script: |
         echo
@@ -53,6 +56,7 @@ stages:
         echo "After '/usr/bin/tput -T xterm-256color setaf 9'"
         echo
       displayName: "tput with xterm-256color"
+      condition: always()
 
     - script: |
         echo
@@ -61,9 +65,11 @@ stages:
         echo "After '/usr/bin/tput -Txterm setaf 2'"
         echo
       displayName: "tput with xterm"
+      condition: always()
 
     - script: make build
       displayName: "Build image"
+      condition: always()
 
     - script: make test
       displayName: "Test image"
