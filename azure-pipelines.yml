@@ -22,12 +22,6 @@ stages:
 
     steps:
 
-    - script: which -a tput
-      displayName: "which -a tput"
-
-    - script: env
-      displayName: "env"
-
     - script: make build
       displayName: "Build image"
 
