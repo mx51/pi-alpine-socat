@@ -61,3 +61,4 @@ stages:
 
       - script: make testruntime
         displayName: "Perform runtime test"
+
